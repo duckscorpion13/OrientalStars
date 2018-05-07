@@ -59,6 +59,9 @@
 		35ED398720792553005489EF /* SpawnBallItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED398620792553005489EF /* SpawnBallItem.swift */; };
 		35ED398B2079470D005489EF /* CollectionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED398A2079470D005489EF /* CollectionUtils.swift */; };
 		35ED398D20795358005489EF /* BreakoutGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED398C20795358005489EF /* BreakoutGameView.swift */; };
+		F94E772820A03E7500B45146 /* GrowPaddleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772720A03E7500B45146 /* GrowPaddleItem.swift */; };
+		F94E772A20A0417E00B45146 /* PaddleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772920A0417E00B45146 /* PaddleEffect.swift */; };
+		F94E772C20A0430600B45146 /* GrowPaddleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772B20A0430600B45146 /* GrowPaddleEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +141,9 @@
 		35ED398620792553005489EF /* SpawnBallItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpawnBallItem.swift; sourceTree = "<group>"; };
 		35ED398A2079470D005489EF /* CollectionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionUtils.swift; sourceTree = "<group>"; };
 		35ED398C20795358005489EF /* BreakoutGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutGameView.swift; sourceTree = "<group>"; };
+		F94E772720A03E7500B45146 /* GrowPaddleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowPaddleItem.swift; sourceTree = "<group>"; };
+		F94E772920A0417E00B45146 /* PaddleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddleEffect.swift; sourceTree = "<group>"; };
+		F94E772B20A0430600B45146 /* GrowPaddleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowPaddleEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +287,8 @@
 				35ED398C20795358005489EF /* BreakoutGameView.swift */,
 				3537082A2077E5CA00B89F79 /* HUD.swift */,
 				3595657F2073DB000091FFF9 /* Paddle.swift */,
+				F94E772920A0417E00B45146 /* PaddleEffect.swift */,
+				F94E772B20A0430600B45146 /* GrowPaddleEffect.swift */,
 				35276914207AAAD600938B72 /* Ticking.swift */,
 			);
 			name = Game;
@@ -293,6 +301,7 @@
 				35E8C9912077834C003561E1 /* BasicItem.swift */,
 				35ED398620792553005489EF /* SpawnBallItem.swift */,
 				3527690C207A4EEF00938B72 /* GrowBallItem.swift */,
+				F94E772720A03E7500B45146 /* GrowPaddleItem.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -458,8 +467,10 @@
 			files = (
 				35E8C98820774BB1003561E1 /* Item.swift in Sources */,
 				35E8C9922077834C003561E1 /* BasicItem.swift in Sources */,
+				F94E772C20A0430600B45146 /* GrowPaddleEffect.swift in Sources */,
 				359565A22075200C0091FFF9 /* Level2.swift in Sources */,
 				359565A020751DB50091FFF9 /* Level1.swift in Sources */,
+				F94E772A20A0417E00B45146 /* PaddleEffect.swift in Sources */,
 				35ED398520791545005489EF /* Rectangular.swift in Sources */,
 				35ED398D20795358005489EF /* BreakoutGameView.swift in Sources */,
 				359565522073D8F40091FFF9 /* BreakoutGameController.swift in Sources */,
@@ -469,6 +480,7 @@
 				3595659C20751A650091FFF9 /* BasicLevel.swift in Sources */,
 				3537082D2077F58400B89F79 /* Level3.swift in Sources */,
 				35E8C99420778411003561E1 /* RandomUtils.swift in Sources */,
+				F94E772820A03E7500B45146 /* GrowPaddleItem.swift in Sources */,
 				3527690F207A60E900938B72 /* DateSpan.swift in Sources */,
 				35ED3983207914B1005489EF /* Positioned.swift in Sources */,
 				35ED398720792553005489EF /* SpawnBallItem.swift in Sources */,

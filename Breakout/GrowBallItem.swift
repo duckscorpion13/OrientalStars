@@ -15,6 +15,6 @@ class GrowBallItem: BasicItem {
 	}
 	
 	override func onPickUp() {
-		game.addToAllBalls(effect: GrowBallEffect(growFactor: 2), forSeconds: 10)
+		game.addToAllBalls(effect: GrowBallEffect(growFactor: 1.2), forSeconds: 5)
 	}
 }

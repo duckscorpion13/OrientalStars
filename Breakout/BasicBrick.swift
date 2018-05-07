@@ -20,6 +20,8 @@ class BasicBrick: Brick {
 	var game: BreakoutGame!
 	var gridPosition: GridPosition!
 	
+    var image: UIImage = UIImage(named: "enemy")!
+    
 	func setGame(_ game: BreakoutGame) {
 		self.game = game
 	}
@@ -40,10 +42,20 @@ class BasicBrick: Brick {
 		return UIColor.yellow.cgColor
 	}
 	
+    func getImage() -> CGImage? {
+        if let img = UIImage(named: "enemy") {
+            return img.cgImage
+        }
+        return nil
+    }
+    
 	func render(to context: CGContext) {
 		context.setFillColor(getColor())
 		context.fill(bounds)
-	}
+        if let cg = getImage() {
+            context.draw(cg, in: bounds)
+        }
+    }
 	
 	func collisionWith(ball: Ball) -> BallCollision? {
 		return collisionOf(rect: self, withMovingCircle: ball)

@@ -17,28 +17,34 @@ class Level3: BasicLevel {
 	}
 	
 	override func sampleBrick() -> Brick {
-		switch randomInt(from: 0, to: 8) {
+		switch randomInt(from: 0, to: 15) {
 		case 0:
-			return ExplodingBrick(radius: 3)
+			return ExplodingBrick(radius: 1)
 		case 1:
 			return HardBrick(resistance: 4)
 		case 2:
 			return HardBrick(resistance: 3)
 		case 3:
-			return UnbreakableBrick()
+			return HardBrick(resistance: 2)
 		case 4:
 			return ItemBrick(item: sampleItem())
+        case 5:
+            return UnbreakableBrick()
 		default:
 			return BasicBrick()
 		}
 	}
 	
 	override func sampleItem() -> Item {
-		switch randomInt(from: 0, to: 2) {
+		switch randomInt(from: 0, to: 3) {
 		case 0:
 			return GrowBallItem()
+        case 1:
+            return SpawnBallItem()
+        case 2:
+            return GrowPaddleItem()
 		default:
-			return SpawnBallItem()
+			return BasicItem()
 		}
 	}
 }

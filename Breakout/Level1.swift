@@ -21,7 +21,7 @@ class Level1: BasicLevel {
 		case 0:
 			return ItemBrick(item: sampleItem())
 		default:
-			return BasicBrick()
+            return BasicBrick()//ItemBrick(item:GrowPaddleItem())
 		}
 	}
 	

@@ -13,6 +13,8 @@ import CoreGraphics
  * The central game object that can destroy bricks.
  */
 class Ball: Circular, BallCollidable, Rendereable, Equatable {
+    var maxRadius: CGFloat
+    var minRadius: CGFloat
 	private(set) var radius: CGFloat
 	private(set) var pos: CGPoint
 	private var collided: Bool = false
@@ -24,6 +26,8 @@ class Ball: Circular, BallCollidable, Rendereable, Equatable {
 	init(x: CGFloat, y: CGFloat, radius: CGFloat, initialVelocity: CGFloat, color: CGColor) {
 		pos = CGPoint(x: x, y: y)
 		self.radius = radius
+        self.maxRadius = 4 * radius
+        self.minRadius = radius
 		self.color = color
 		
 		let angle: CGFloat = randomAngleRad(betweenDeg: 200, andDeg: 340)

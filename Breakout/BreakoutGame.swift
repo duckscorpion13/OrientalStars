@@ -126,6 +126,11 @@ class BreakoutGame: Rendereable, Ticking {
 		}
 	}
 	
+    func addToPaddle(effect: PaddleEffect, forSeconds: Double)
+    {
+        paddle.add(effect: effect, forSeconds: forSeconds)
+    }
+    
 	private func advanceToNextLevel() {
 		// A transition is intentionally not added to the
 		// list of progressives as there only should be one
@@ -181,6 +186,7 @@ class BreakoutGame: Rendereable, Ticking {
 		for ball in balls {
 			ball.update(game: self)
 		}
+        paddle.update()
 	}
 	
 	func remove(ball: Ball) {
