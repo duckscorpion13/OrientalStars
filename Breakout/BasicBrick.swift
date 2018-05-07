@@ -50,7 +50,8 @@ class BasicBrick: Brick {
     }
     
 	func render(to context: CGContext) {
-		context.setFillColor(getColor())
+//        context.setFillColor(getColor())
+        context.setFillColor(UIColor.clear.cgColor)
 		context.fill(bounds)
         if let cg = getImage() {
             context.draw(cg, in: bounds)

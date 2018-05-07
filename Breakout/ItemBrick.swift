@@ -23,8 +23,15 @@ class ItemBrick: BasicBrick {
 		return UIColor.cyan.cgColor
 	}
 	
+    override func getImage() -> CGImage? {
+        if let img = UIImage(named: "treasure") {
+            return img.cgImage
+        }
+        return nil
+    }
+    
 	override func onHit(ball: Ball) {
-		item.place(at: pos, withSpeed: 2, andRadius: game.bounds.width * 0.15)
+		item.place(at: pos, withSpeed: 2, andRadius: game.bounds.width * 0.1)
 		item.setGame(game)
 		game.items.append(item)
 	}

@@ -43,14 +43,16 @@ class BasicLevel: Level {
 	}
 	
 	func addBrick(in bounds: CGRect, with game: BreakoutGame, at gridPos: GridPosition) {
-		var brick = sampleBrick()
-		brick.gridPosition = gridPos
-		brick.setGame(game)
-		brick.placeIn(bounds: bounds)
-		bricks.append(brick)
-		if (brick.affectsLevelCounter()) {
-			brickCounter += 1
-		}
+        if let _brick = sampleBrick() {
+            var brick = _brick
+            brick.gridPosition = gridPos
+            brick.setGame(game)
+            brick.placeIn(bounds: bounds)
+            bricks.append(brick)
+            if (brick.affectsLevelCounter()) {
+                brickCounter += 1
+            }
+        }
 	}
 	
 	func sampleItem() -> Item {
@@ -58,7 +60,7 @@ class BasicLevel: Level {
 		return BasicItem()
 	}
 	
-	func sampleBrick() -> Brick {
+	func sampleBrick() -> Brick? {
 		return BasicBrick()
 	}
 	

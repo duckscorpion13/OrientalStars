@@ -23,10 +23,19 @@ class HardBrick: BasicBrick {
 		hitsLeft = resistance
 	}
 	
+    override func getImage() -> CGImage? {
+        if let img = UIImage(named: "dragonKing") {
+            return img.cgImage
+        }
+        return nil
+    }
+    
 	override func getColor() -> CGColor {
 		return color
 	}
 	
+    
+    
 	override func onHit(ball: Ball) {
 		hitsLeft -= 1
 		if color.alpha > 0.4 {

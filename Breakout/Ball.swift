@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreGraphics
-
+import UIKit
 /**
  * The central game object that can destroy bricks.
  */
@@ -56,10 +56,20 @@ class Ball: Circular, BallCollidable, Rendereable, Equatable {
 		}
 	}
 	
+    func getImage() -> CGImage? {
+        if let img = UIImage(named: "star") {
+            return img.cgImage
+        }
+        return nil
+    }
+    
 	func render(to context: CGContext) {
 		renderEffects(to: context)
-		context.setFillColor(color)
-		context.fillEllipse(in: CGRect(x: pos.x - radius, y: pos.y - radius, width: (radius * 2), height: (radius * 2)))
+//        context.setFillColor(color)
+//        context.fillEllipse(in: CGRect(x: pos.x - radius, y: pos.y - radius, width: (radius * 2), height: (radius * 2)))
+        if let cg = getImage() {
+            context.draw(cg, in: CGRect(x: pos.x - radius, y: pos.y - radius, width: (radius * 2), height: (radius * 2)))
+        }
 	}
 	
 	private func updateEffects() {

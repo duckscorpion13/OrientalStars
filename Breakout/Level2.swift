@@ -16,11 +16,13 @@ class Level2: BasicLevel {
 		get { return Level3() }
 	}
 	
-	override func sampleBrick() -> Brick {
-		switch randomInt(from: 0, to: 3) {
-		case 0:
-			return HardBrick(resistance: 2)
+	override func sampleBrick() -> Brick? {
+		switch randomInt(from: 0, to: 6) {
+        case 0:
+            return nil
 		case 1:
+			return HardBrick(resistance: 2)
+		case 2:
 			return ItemBrick(item: sampleItem())
 		default:
 			return BasicBrick()

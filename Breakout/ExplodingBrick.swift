@@ -17,6 +17,13 @@ class ExplodingBrick: BasicBrick {
 		self.radius = radius
 	}
 	
+    override func getImage() -> CGImage? {
+        if let img = UIImage(named: "bomb") {
+            return img.cgImage
+        }
+        return nil
+    }
+    
 	override func getColor() -> CGColor {
 		return UIColor.orange.cgColor
 	}

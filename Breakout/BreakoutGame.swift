@@ -211,7 +211,7 @@ class BreakoutGame: Rendereable, Ticking {
 	private func prepare(level: Level, offset: CGVector) {
 		let brickPadding: CGFloat = bounds.height * 0.003
 		let brickWidth: CGFloat = bounds.width / CGFloat(xBricks)
-		let brickHeight: CGFloat = bounds.height * 0.03
+		let brickHeight: CGFloat = 2 * brickWidth/3//bounds.height * 0.03
 		let startY: CGFloat = bounds.height * 0.1
 		
 		for gridY in 0..<level.yBricks {
