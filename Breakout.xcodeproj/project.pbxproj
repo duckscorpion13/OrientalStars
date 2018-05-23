@@ -62,6 +62,7 @@
 		F94E772820A03E7500B45146 /* GrowPaddleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772720A03E7500B45146 /* GrowPaddleItem.swift */; };
 		F94E772A20A0417E00B45146 /* PaddleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772920A0417E00B45146 /* PaddleEffect.swift */; };
 		F94E772C20A0430600B45146 /* GrowPaddleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772B20A0430600B45146 /* GrowPaddleEffect.swift */; };
+		F9D00F2320B508F400E2E807 /* StarsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D00F2220B508F400E2E807 /* StarsOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		F94E772720A03E7500B45146 /* GrowPaddleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowPaddleItem.swift; sourceTree = "<group>"; };
 		F94E772920A0417E00B45146 /* PaddleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddleEffect.swift; sourceTree = "<group>"; };
 		F94E772B20A0430600B45146 /* GrowPaddleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowPaddleEffect.swift; sourceTree = "<group>"; };
+		F9D00F2220B508F400E2E807 /* StarsOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarsOverlay.swift; path = ../../../Code/dfstar/bubble_pop/view/StarsOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 		359565AC207545180091FFF9 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				F9D00F2220B508F400E2E807 /* StarsOverlay.swift */,
 				359565512073D8F40091FFF9 /* BreakoutGameController.swift */,
 				3595657D2073D9E00091FFF9 /* BreakoutGame.swift */,
 				35C4C1FE207E3F5D00EB7203 /* BrickExplosion.swift */,
@@ -499,6 +502,7 @@
 				359565952075176E0091FFF9 /* Level.swift in Sources */,
 				35ED397F2078A874005489EF /* ItemBrick.swift in Sources */,
 				35C4C1FD207E3DB400EB7203 /* ExplodingBrick.swift in Sources */,
+				F9D00F2320B508F400E2E807 /* StarsOverlay.swift in Sources */,
 				359565502073D8F40091FFF9 /* AppDelegate.swift in Sources */,
 				35276913207A9B1400938B72 /* SettingsNavigationController.swift in Sources */,
 				35C4C201207E3FA600EB7203 /* Progressive.swift in Sources */,
