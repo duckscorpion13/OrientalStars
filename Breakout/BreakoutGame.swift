@@ -203,8 +203,10 @@ class BreakoutGame: Rendereable, Ticking {
 	
 	func showGameOver() {
 		let alert = UIAlertController(title: "Game Over", message: hud.getLine(), preferredStyle: .alert)
-		let action = UIAlertAction(title: "Restart", style: .default, handler: {(a) -> () in self.restart()})
-		alert.addAction(action)
+		let action1 = UIAlertAction(title: "Restart", style: .default, handler: {(a) -> () in self.restart()})
+		alert.addAction(action1)
+        let action2 = UIAlertAction(title: "Back", style: .default, handler: {(a) -> () in self.controller.dismiss(animated: true)})
+        alert.addAction(action2)
 		controller.present(alert, animated: true, completion: nil)
 	}
 	
