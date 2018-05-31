@@ -87,7 +87,7 @@ class Ball: Circular, BallCollidable, Rendereable, Equatable {
 		collided = false
 		let newPos = predictPos()
 		let isInBounds = game.bounds.contains(self, withPadding: -radius)
-		let hitsGround = hitsBottomWall(newPos.y, game.bounds)
+		let hitsGround = hitsBottomWall(newPos.y, game.bounds) || hitsTopWall(newPos.y, game.bounds) 
 		let staysInGame = (!hitsGround || game.testModeEnabled.value) && isInBounds
 		
 		if staysInGame {
@@ -101,7 +101,7 @@ class Ball: Circular, BallCollidable, Rendereable, Equatable {
 				performCollisions(with: game.nextLevel!.bricks,
 				                  remover: {(i) -> () in game.nextLevel!.destroyBrick(at: i)})
 			}
-			performCollisions(with: [game.paddle], remover: nil)
+			performCollisions(with: [game.paddle, game.paddleSub], remover: nil)
 			performCollisions(with: game.currentLevel.bricks,
 			                  remover: {(i) -> () in game.currentLevel.destroyBrick(at: i)})
 			performCollisions(with: game.balls, remover: nil)

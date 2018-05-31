@@ -44,6 +44,7 @@ class BreakoutGameController: UIViewController {
 	override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
 		let touch: UITouch! = touches.first
 		game.paddle.moveTo(x: touch.location(in: view).x)
+        game.paddleSub.moveTo(x: touch.location(in: view).x)
 	}
 	
 	@objc

@@ -20,7 +20,6 @@ class BasicBrick: Brick {
 	var game: BreakoutGame!
 	var gridPosition: GridPosition!
 	
-    var image: UIImage = UIImage(named: "enemy")!
     
 	func setGame(_ game: BreakoutGame) {
 		self.game = game

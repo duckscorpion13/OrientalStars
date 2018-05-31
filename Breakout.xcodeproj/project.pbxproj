@@ -135,6 +135,7 @@
 		F94E772B20A0430600B45146 /* GrowPaddleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowPaddleEffect.swift; sourceTree = "<group>"; };
 		F99E1F4720B54903007E0ACA /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		F99E1F4920B549B8007E0ACA /* Breakout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Breakout-Bridging-Header.h"; sourceTree = "<group>"; };
+		F99E1F8020B55D9A007E0ACA /* Breakout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Breakout.entitlements; sourceTree = "<group>"; };
 		F9D00F2220B508F400E2E807 /* StarsOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarsOverlay.swift; path = ../../../Code/dfstar/bubble_pop/view/StarsOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +209,7 @@
 		3595654E2073D8F40091FFF9 /* Breakout */ = {
 			isa = PBXGroup;
 			children = (
+				F99E1F8020B55D9A007E0ACA /* Breakout.entitlements */,
 				F99E1F4720B54903007E0ACA /* BaseVC.swift */,
 				3595654F2073D8F40091FFF9 /* AppDelegate.swift */,
 				359565AC207545180091FFF9 /* Game */,
@@ -367,6 +369,11 @@
 						DevelopmentTeam = P9EZG3V6S8;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -620,6 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Breakout/Breakout.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9EZG3V6S8;
@@ -642,6 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Breakout/Breakout.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9EZG3V6S8;

@@ -20,7 +20,7 @@ class BreakoutGame: Rendereable, Ticking {
 		get { return view.bounds }
 	}
 	
-	private let paddleColor: CGColor = UIColor.orange.cgColor
+	private let paddleColor: CGColor = UIColor.black.cgColor
 	private let brickColor: CGColor = UIColor.yellow.cgColor
 	private let ballColor: CGColor = UIColor.white.cgColor
 	
@@ -38,6 +38,7 @@ class BreakoutGame: Rendereable, Ticking {
 	
 	private(set) var hud: HUD!
 	private(set) var paddle: Paddle!
+    private(set) var paddleSub: Paddle!
 	var balls = [Ball]()
 	var items = [Item]()
 	
@@ -81,11 +82,18 @@ class BreakoutGame: Rendereable, Ticking {
 		
 		paddle = Paddle(
 				centerX: bounds.width / 2,
-				centerY: bounds.height * 0.8,
+				centerY: bounds.height * 0.9,
 				width: bounds.width * 0.2,
-				height: bounds.height * 0.02,
+				height: bounds.height * 0.05,
 				color: paddleColor)
 		
+        paddleSub = Paddle(
+            centerX: bounds.width / 2,
+            centerY: bounds.height * 0.1,
+            width: bounds.width * 0.2,
+            height: bounds.height * 0.05,
+            color: paddleColor)
+        
 		restart()
 	}
 	
@@ -129,6 +137,7 @@ class BreakoutGame: Rendereable, Ticking {
     func addToPaddle(effect: PaddleEffect, forSeconds: Double)
     {
         paddle.add(effect: effect, forSeconds: forSeconds)
+        paddleSub.add(effect: effect, forSeconds: forSeconds)
     }
     
 	private func advanceToNextLevel() {
@@ -166,7 +175,7 @@ class BreakoutGame: Rendereable, Ticking {
 		}
 		
 		for (i, item) in items.enumerated().reversed() {
-			let pickUp: Bool = item.collidesWith(paddle: paddle)
+			let pickUp: Bool = item.collidesWith(paddle: paddle) || item.collidesWith(paddle: paddleSub)
 			
 			if pickUp {
 				item.onPickUp()
@@ -187,6 +196,7 @@ class BreakoutGame: Rendereable, Ticking {
 			ball.update(game: self)
 		}
         paddle.update()
+        paddleSub.update()
 	}
 	
 	func remove(ball: Ball) {
@@ -214,7 +224,7 @@ class BreakoutGame: Rendereable, Ticking {
 		let brickPadding: CGFloat = bounds.height * 0.003
 		let brickWidth: CGFloat = bounds.width / CGFloat(xBricks)
 		let brickHeight: CGFloat = 2 * brickWidth/3//bounds.height * 0.03
-		let startY: CGFloat = bounds.height * 0.1
+		let startY: CGFloat = bounds.height * 0.35
 		
 		for gridY in 0..<level.yBricks {
 			for gridX in 0..<xBricks {
@@ -231,6 +241,7 @@ class BreakoutGame: Rendereable, Ticking {
 	func render(to context: CGContext) {
 		backgroundImage.value?.draw(in: bounds)
 		paddle.render(to: context)
+        paddleSub.render(to: context)
 		for ball in balls {
 			ball.render(to: context)
 		}
