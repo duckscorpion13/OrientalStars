@@ -65,8 +65,8 @@ class SettingsViewController: UITableViewController {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.destination is BreakoutGameController {
-			let game: BreakoutGame = (segue.destination as! BreakoutGameController).game
+		if segue.destination is BreakoutGameVC {
+			let game: BreakoutGame = (segue.destination as! BreakoutGameVC).game
 			let changedTestModeSetting = model.testModeEnabled.value != testModeSwitch.isOn
 			
 			syncModelWithView()

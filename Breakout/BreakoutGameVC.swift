@@ -13,7 +13,7 @@ import UIKit
  * user input to control the game. Furthermore
  * does it contain the game loop.
  */
-class BreakoutGameController: UIViewController {
+class BreakoutGameVC: UIViewController {
 	private let settingsModel = SettingsModel()
 	private var loaded: Bool = false
 	private(set) var game: BreakoutGame!
@@ -25,7 +25,15 @@ class BreakoutGameController: UIViewController {
 	private var tps = 60
 	private var tickDelay: TimeInterval!
 	private var lastTick = Date()
-	
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        //支持多点触摸
+        self.view.isMultipleTouchEnabled = true
+    }
+    
 	override func viewWillAppear(_ animated: Bool) {
 		if (!loaded) {
 			game = BreakoutGame(controller: self, initialBallSpeed: 9, initialBallCount: 1)
@@ -42,13 +50,17 @@ class BreakoutGameController: UIViewController {
 	}
 	
 	override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-		let touch: UITouch! = touches.first
-		game.paddle.moveTo(x: touch.location(in: view).x)
-        game.paddleSub.moveTo(x: touch.location(in: view).x)
-	}
+        if let touch = touches.first {
+            let pt = touch.location(in: view)
+            if(pt.y > self.view.bounds.height/2) {
+                game.paddle.moveTo(x: pt.x)
+            } else {
+                game.paddleSub.moveTo(x: pt.x)
+            }
+        }
+    }
 	
-	@objc
-	private func gameLoop() {
+	@objc private func gameLoop() {
 		if !view.isHidden {
 			let now = Date()
 			if now.timeIntervalSince(lastTick) > tickDelay {

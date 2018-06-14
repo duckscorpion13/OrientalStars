@@ -24,7 +24,7 @@ class HardBrick: BasicBrick {
 	}
 	
     override func getImage() -> CGImage? {
-        if let img = UIImage(named: "dragonKing") {
+        if let img = UIImage(named: "king") {
             return img.cgImage
         }
         return nil

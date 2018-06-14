@@ -19,7 +19,7 @@ class BasicBrick: Brick {
 	var bounds: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
 	var game: BreakoutGame!
 	var gridPosition: GridPosition!
-	
+    let rand = randomInt()%4 + 1
     
 	func setGame(_ game: BreakoutGame) {
 		self.game = game
@@ -42,7 +42,8 @@ class BasicBrick: Brick {
 	}
 	
     func getImage() -> CGImage? {
-        if let img = UIImage(named: "enemy") {
+       
+        if let img = UIImage(named: "monster\(rand)") {
             return img.cgImage
         }
         return nil

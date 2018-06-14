@@ -26,10 +26,10 @@ class BaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        UIApplication.shared.statusBarView?.backgroundColor = UIColor.init(red: 0xFC/0xFF,
-//                                                                           green: 0x55/0xFF,
-//                                                                           blue: 0x20/0xFF,
-//                                                                           alpha: 1.0)
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.init(red: 0xC4/0xFF,
+                                                                           green: 0x0D/0xFF,
+                                                                           blue: 0x24/0xFF,
+                                                                           alpha: 1.0)
       
         self.setupWebView()
         self.setupIndicator()
@@ -43,7 +43,8 @@ class BaseVC: UIViewController {
     
     func setupIndicator()
     {
-        indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        indicator.color = UIColor.gray
         view.addSubview(indicator)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         indicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

@@ -21,7 +21,7 @@
 		3537082D2077F58400B89F79 /* Level3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537082C2077F58400B89F79 /* Level3.swift */; };
 		353708312077FC0A00B89F79 /* Holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353708302077FC0A00B89F79 /* Holder.swift */; };
 		359565502073D8F40091FFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595654F2073D8F40091FFF9 /* AppDelegate.swift */; };
-		359565522073D8F40091FFF9 /* BreakoutGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359565512073D8F40091FFF9 /* BreakoutGameController.swift */; };
+		359565522073D8F40091FFF9 /* BreakoutGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359565512073D8F40091FFF9 /* BreakoutGameVC.swift */; };
 		359565552073D8F40091FFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359565532073D8F40091FFF9 /* Main.storyboard */; };
 		359565572073D8F40091FFF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359565562073D8F40091FFF9 /* Assets.xcassets */; };
 		3595655A2073D8F40091FFF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359565582073D8F40091FFF9 /* LaunchScreen.storyboard */; };
@@ -56,7 +56,7 @@
 		35ED398520791545005489EF /* Rectangular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED398420791545005489EF /* Rectangular.swift */; };
 		35ED398720792553005489EF /* SpawnBallItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED398620792553005489EF /* SpawnBallItem.swift */; };
 		35ED398B2079470D005489EF /* CollectionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED398A2079470D005489EF /* CollectionUtils.swift */; };
-		35ED398D20795358005489EF /* BreakoutGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED398C20795358005489EF /* BreakoutGameView.swift */; };
+		35ED398D20795358005489EF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED398C20795358005489EF /* GameView.swift */; };
 		F94E772820A03E7500B45146 /* GrowPaddleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772720A03E7500B45146 /* GrowPaddleItem.swift */; };
 		F94E772A20A0417E00B45146 /* PaddleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772920A0417E00B45146 /* PaddleEffect.swift */; };
 		F94E772C20A0430600B45146 /* GrowPaddleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E772B20A0430600B45146 /* GrowPaddleEffect.swift */; };
@@ -81,7 +81,7 @@
 		353708302077FC0A00B89F79 /* Holder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Holder.swift; sourceTree = "<group>"; };
 		3595654C2073D8F40091FFF9 /* Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3595654F2073D8F40091FFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		359565512073D8F40091FFF9 /* BreakoutGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGameController.swift; sourceTree = "<group>"; };
+		359565512073D8F40091FFF9 /* BreakoutGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGameVC.swift; sourceTree = "<group>"; };
 		359565542073D8F40091FFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		359565562073D8F40091FFF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		359565592073D8F40091FFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		35ED398420791545005489EF /* Rectangular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangular.swift; sourceTree = "<group>"; };
 		35ED398620792553005489EF /* SpawnBallItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpawnBallItem.swift; sourceTree = "<group>"; };
 		35ED398A2079470D005489EF /* CollectionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionUtils.swift; sourceTree = "<group>"; };
-		35ED398C20795358005489EF /* BreakoutGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutGameView.swift; sourceTree = "<group>"; };
+		35ED398C20795358005489EF /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		4B13B2596A26BCDC78DBFBD4 /* Pods-Breakout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakout/Pods-Breakout.release.xcconfig"; sourceTree = "<group>"; };
 		4C79250AEFA4E09F159FBA7E /* Pods-BreakoutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakoutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BreakoutUITests/Pods-BreakoutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		56420AC2DD3C3AD1D2BEC248 /* Pods_Breakout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,10 +274,10 @@
 			isa = PBXGroup;
 			children = (
 				F9D00F2220B508F400E2E807 /* StarsOverlay.swift */,
-				359565512073D8F40091FFF9 /* BreakoutGameController.swift */,
+				359565512073D8F40091FFF9 /* BreakoutGameVC.swift */,
 				3595657D2073D9E00091FFF9 /* BreakoutGame.swift */,
 				35C4C1FE207E3F5D00EB7203 /* BrickExplosion.swift */,
-				35ED398C20795358005489EF /* BreakoutGameView.swift */,
+				35ED398C20795358005489EF /* GameView.swift */,
 				3537082A2077E5CA00B89F79 /* HUD.swift */,
 				3595657F2073DB000091FFF9 /* Paddle.swift */,
 				F94E772920A0417E00B45146 /* PaddleEffect.swift */,
@@ -366,7 +366,7 @@
 				TargetAttributes = {
 					3595654B2073D8F40091FFF9 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = P9EZG3V6S8;
+						DevelopmentTeam = 2GA5YJSF2W;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -442,8 +442,8 @@
 				359565A020751DB50091FFF9 /* Level1.swift in Sources */,
 				F94E772A20A0417E00B45146 /* PaddleEffect.swift in Sources */,
 				35ED398520791545005489EF /* Rectangular.swift in Sources */,
-				35ED398D20795358005489EF /* BreakoutGameView.swift in Sources */,
-				359565522073D8F40091FFF9 /* BreakoutGameController.swift in Sources */,
+				35ED398D20795358005489EF /* GameView.swift in Sources */,
+				359565522073D8F40091FFF9 /* BreakoutGameVC.swift in Sources */,
 				359565A8207524960091FFF9 /* Moveable.swift in Sources */,
 				3595658E2073FE100091FFF9 /* BallCollision.swift in Sources */,
 				3537082B2077E5CA00B89F79 /* HUD.swift in Sources */,
@@ -630,11 +630,11 @@
 				CODE_SIGN_ENTITLEMENTS = Breakout/Breakout.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P9EZG3V6S8;
+				DEVELOPMENT_TEAM = 2GA5YJSF2W;
 				INFOPLIST_FILE = Breakout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lbd.dfstar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.df.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Breakout/Breakout-Bridging-Header.h";
@@ -653,11 +653,11 @@
 				CODE_SIGN_ENTITLEMENTS = Breakout/Breakout.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P9EZG3V6S8;
+				DEVELOPMENT_TEAM = 2GA5YJSF2W;
 				INFOPLIST_FILE = Breakout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lbd.dfstar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.df.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Breakout/Breakout-Bridging-Header.h";

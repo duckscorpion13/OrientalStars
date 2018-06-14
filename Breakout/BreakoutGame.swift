@@ -14,8 +14,8 @@ import UIKit
  * balls and levels.
  */
 class BreakoutGame: Rendereable, Ticking {
-	private let controller: BreakoutGameController
-	private let view: BreakoutGameView
+	private let controller: BreakoutGameVC
+	private let view: GameView
 	var bounds: CGRect {
 		get { return view.bounds }
 	}
@@ -65,12 +65,13 @@ class BreakoutGame: Rendereable, Ticking {
 	var backgroundImage = Holder<UIImage?>(with: nil)
 	var testModeEnabled = Holder<Bool>(with: false)
 	
-	init(controller: BreakoutGameController, initialBallSpeed: CGFloat, initialBallCount: Int) {
+	init(controller: BreakoutGameVC, initialBallSpeed: CGFloat, initialBallCount: Int)
+    {
 		self.controller = controller
 		self.initialBallSpeed = initialBallSpeed
 		self.initialBallCount = initialBallCount
 		
-		view = controller.view as! BreakoutGameView
+		view = controller.view as! GameView
 		view.setGame(self)
 		hud = HUD(
 				x: 10,
@@ -83,20 +84,22 @@ class BreakoutGame: Rendereable, Ticking {
 		paddle = Paddle(
 				centerX: bounds.width / 2,
 				centerY: bounds.height * 0.9,
-				width: bounds.width * 0.2,
+				width: bounds.width * 0.25,
 				height: bounds.height * 0.05,
 				color: paddleColor)
 		
+ 
         paddleSub = Paddle(
             centerX: bounds.width / 2,
             centerY: bounds.height * 0.1,
-            width: bounds.width * 0.2,
+            width: bounds.width * 0.25,
             height: bounds.height * 0.05,
             color: paddleColor)
         
 		restart()
 	}
 	
+
 	func restart() {
 		score.value = 0
 		levelIndex.value = 1

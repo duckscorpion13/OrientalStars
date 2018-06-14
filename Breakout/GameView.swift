@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BreakoutGameView: UIView {
+class GameView: UIView {
 	private var game: BreakoutGame!
 	
 	func setGame(_ game: BreakoutGame) {
